@@ -8,7 +8,7 @@ import React, { useContext } from "react";
 import { FormContext } from "../context/formContext";
 
 const FormQuestions = ( {questions} ) => {
-    const {  answeredOntology } = useContext(FormContext);
+    const {  answeredOntology, formData2, formData, formErrors, setFormData, setFormErrors } = useContext(FormContext);
     let counter = 1; // used to control question indexing
     return (
 
@@ -43,6 +43,7 @@ const FormQuestions = ( {questions} ) => {
                                     {renderInputComponent(
                                         question,
                                         question.ontologyConfig,
+                                        answeredOntology, formData, formErrors, setFormData, setFormErrors
                                     )}
                                     {question.questionConfig.helperText && (
                                         <Typography variant="body1">{question.questionConfig.helperText}</Typography>
@@ -50,7 +51,7 @@ const FormQuestions = ( {questions} ) => {
                                 </Grid>
                             </CardContent>
                         ) : (
-                            renderInputComponent2(question.ontologyConfig)
+                            renderInputComponent2(question.ontologyConfig,formData2)
                         )}
                     </React.Fragment>
                 ))}

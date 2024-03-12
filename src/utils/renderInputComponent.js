@@ -7,8 +7,8 @@ import ACTION from "../constants/answeredOntologyAction";
 import { FormContext } from "../context/formContext";
 import { useContext } from "react";
 
-const renderInputComponent = (question, ontologyConfig) => {
-    const {  answeredOntology, formData, formErrors, setFormData, setFormErrors } = useContext(FormContext);
+const renderInputComponent = (question, ontologyConfig,answeredOntology, formData, formErrors, setFormData, setFormErrors) => {
+  // const {  answeredOntology, formData, formErrors, setFormData, setFormErrors } = useContext(FormContext);
 
    
     switch (question.questionConfig.inputUiComponent) {

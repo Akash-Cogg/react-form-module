@@ -1,4 +1,3 @@
-"use client";
 import { Button, Grid} from "@mui/material";
 import React, { useEffect } from "react";
 import Header from "./Header";

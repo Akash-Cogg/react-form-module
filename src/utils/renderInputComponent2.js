@@ -3,11 +3,7 @@ import SOURCETYPE from "../constants/suorceType";
 import { useContext } from "react";
 
   // for derived ontologies
-  const renderInputComponent2 = (ontologyConfig) => {
-    let { formData2 } = useContext(FormContext);
-    debugger;
-    console.log("formData2 is",formData2)
-
+  const renderInputComponent2 = (ontologyConfig,formData2) => {
     // Extract the ontology node name
     const nodeName = ontologyConfig.ontologyNodes[0].Name;
 
